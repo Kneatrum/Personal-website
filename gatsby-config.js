@@ -8,5 +8,16 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
-  plugins: [],
+  plugins: [{
+    resolve: `gatsby-source-filesystem`,
+    options: {
+      name: `notes`,
+      path: `${__dirname}/src/pages/`,
+    },
+  },],
+  siteMetadata: {
+    title: 'Kneatrum',
+    description: 'Hardware Dev Portfolio',
+    copyright: 'This website is copyright 2023 Knreatrum'
+  }
 }
